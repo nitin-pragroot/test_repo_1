@@ -1,0 +1,21 @@
+name: Sync Code to Repo B
+
+on:
+  push:
+    branches:
+      - main  # Adjust branch name as needed
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo A
+        uses: actions/checkout@v2
+
+      - name: Push to Repo B
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main  # Branch to push to in Repo B
+          repository: <username>/<repo-B>  # Replace with the username and repo name of Repo B
