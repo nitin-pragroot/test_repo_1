@@ -16,6 +16,6 @@ jobs:
       - name: Push to Repo B
         uses: ad-m/github-push-action@master
         with:
-          github_token: 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
+          github_token: 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
           branch: main  # Branch to push to in Repo B
           repository: nitin-pragroot/test_repo_2  # Replace with the username and repo name of Repo B
